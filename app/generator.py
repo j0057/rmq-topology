@@ -45,6 +45,7 @@ def main():
         if policy.pattern is not None and policy.definition.dead_letter_exchange is not None:
             graph.add_edge(policy.pattern, policy.definition.dead_letter_exchange,
                            label=policy.definition.dead_letter_routing_key, group=policy.pattern,
+                           color='gray', fontcolor='gray',
                            fontname='arial')
 
     graph.layout(prog='dot')
